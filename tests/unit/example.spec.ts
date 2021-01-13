@@ -11,23 +11,23 @@ describe("HelloWorld.vue", () => {
         {
           fact: "homeWorld.name",
           operator: "equals",
-          value: "Tatooine",
+          value: "Tatooine"
         },
         {
           or: [
             {
               fact: "name",
               operator: "contains",
-              value: "Skywalker",
+              value: "Skywalker"
             },
             {
               fact: "eyeColor",
               operator: "equals",
-              value: "green",
-            },
-          ],
-        },
-      ],
+              value: "green"
+            }
+          ]
+        }
+      ]
     };
     // const rule: VisibilityRule = new VisibilityRule(ruleJson, engine);
     const rule = new Rule(ruleObject, engine);
@@ -36,21 +36,21 @@ describe("HelloWorld.vue", () => {
       name: "first group",
       description: "",
       visibilityRules: rule,
-      fields: [],
+      fields: []
     };
     const schema: Schema = {
       id: "id",
       name: "Schema",
       description: "bla",
-      groups: [group],
+      groups: [group]
     };
 
     const facts = {
       eyeColor: "blue",
       homeWorld: {
-        name: "Tatooine",
+        name: "Tatooine"
       },
-      name: "Luke Skywalker",
+      name: "Luke Skywalker"
     };
 
     console.log(JSON.stringify(schema));
